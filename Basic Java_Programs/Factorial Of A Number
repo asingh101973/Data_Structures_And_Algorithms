@@ -1,0 +1,49 @@
+/* n! = n * (n-1) * (n-2) * (n-3) * ........ * 1
+example :  5! == 5*4*3*2*1 = 120
+
+Iterative Solution for Factorial in Java😒
+*/
+
+class Test { 
+
+    static int factorial(int n) 
+    { 
+        int res = 1, i; 
+        for (i = 2; i <= n; i++) 
+            res *= i; 
+        return res; 
+    } 
+   
+    public static void main(String[] args) 
+    { 
+        int num = 5; 
+        System.out.println("Factorial of " + num + " is " + factorial(5)); 
+    } 
+}
+Time Complexity: O(n)
+Auxiliary Space: O(1)
+
+======================================================================================================================================
+// Recursive Method
+class Test { 
+    
+    static int factorial(int n) 
+    { 
+        if (n == 0) 
+            return 1; 
+  
+        return n * factorial(n - 1); 
+    } 
+  
+    
+    public static void main(String[] args) 
+    { 
+        int num = 5; 
+        System.out.println("Factorial of " + num + " is "  + factorial(5)); 
+    } 
+}
+
+Time Complexity: O(n)
+Auxiliary Space: O(n)
+
+==============================================================================================================================================
